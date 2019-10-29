@@ -305,7 +305,7 @@
 				<key>PStates</key>
 				<false/>
 				<key>PluginType</key>
-				<false/>
+				<true/>
 			</dict>
 		</dict>
 	</dict>
@@ -320,13 +320,15 @@
 		<key>#XMPDetection</key>
 		<string>-1</string>
 		<key>Arguments</key>
-		<string>slide=0 darkwake=no</string>
+		<string>darkwake=0 brcmfx-country=#a brcmfx-driver=1</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
-		<string>MacSSD</string>
+		<string>MacOS</string>
 		<key>DisableCloverHotkeys</key>
 		<false/>
+		<key>Fast</key>
+		<true/>
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>NeverDoRecovery</key>
@@ -341,8 +343,6 @@
 		<false/>
 		<key>StrictHibernate</key>
 		<false/>
-		<key>Timeout</key>
-		<integer>5</integer>
 	</dict>
 	<key>BootGraphics</key>
 	<dict>
@@ -351,7 +351,7 @@
 		<key>EFILoginHiDPI</key>
 		<integer>1</integer>
 		<key>UIScale</key>
-		<integer>2</integer>
+		<integer>1</integer>
 	</dict>
 	<key>CPU</key>
 	<dict>
@@ -376,7 +376,7 @@
 		<key>#UseARTFrequency</key>
 		<true/>
 		<key>HWPEnable</key>
-		<true/>
+		<false/>
 	</dict>
 	<key>Devices</key>
 	<dict>
@@ -645,6 +645,19 @@
 		<false/>
 		<key>Properties</key>
 		<dict>
+			<key>PciRoot(0x0)/Pci(0x1c,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>WLAN</string>
+				<key>compatible</key>
+				<string>pci14e4,4353</string>
+				<key>device_type</key>
+				<string>Airport Extreme</string>
+				<key>model</key>
+				<string>DW1820A (BCM4350) 802.11ac Wireless</string>
+				<key>name</key>
+				<string>Airport</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
 				<key>device-id</key>
@@ -916,21 +929,57 @@
 		</dict>
 		<key>#TextOnly</key>
 		<false/>
+		<key>Custom</key>
+		<dict>
+			<key>Entries</key>
+			<array>
+				<dict>
+					<key>Disabled</key>
+					<false/>
+					<key>FullTitle</key>
+					<string>Window 10 Pro</string>
+					<key>Hidden</key>
+					<false/>
+					<key>Ignore</key>
+					<false/>
+					<key>Image</key>
+					<string>\EFI\CLOVER\themes\Bootcamp4k\icons\vol_internal_ntfs.icns</string>
+					<key>Path</key>
+					<string>\EFI\Microsoft\Boot\bootmgfw.efi</string>
+					<key>Type</key>
+					<string>Windows</string>
+					<key>Volume</key>
+					<string>97A4986C-BA17-47D7-9890-A58594B19CCD</string>
+					<key>VolumeType</key>
+					<string>Internal</string>
+				</dict>
+			</array>
+		</dict>
 		<key>Hide</key>
 		<array>
 			<string>Preboot</string>
 			<string>Recovery</string>
+			<string>Document</string>
 		</array>
 		<key>Language</key>
 		<string>en:0</string>
 		<key>Scan</key>
-		<true/>
+		<dict>
+			<key>Entries</key>
+			<true/>
+			<key>Legacy</key>
+			<false/>
+			<key>Linux</key>
+			<false/>
+			<key>Tool</key>
+			<true/>
+		</dict>
 		<key>ScreenResolution</key>
 		<string>3840x2160</string>
 		<key>ShowOptimus</key>
 		<false/>
 		<key>Theme</key>
-		<string>Bootcamp4k</string>
+		<string>bootcamp</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -1141,8 +1190,6 @@
 		</array>
 		<key>AppleIntelCPUPM</key>
 		<false/>
-		<key>AppleRTC</key>
-		<false/>
 		<key>Debug</key>
 		<false/>
 		<key>DellSMBIOSPatch</key>
@@ -1314,7 +1361,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C07816270GUAD</string>
+		<string>C07841501GUA8</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -1344,9 +1391,9 @@
 		<key>ProductName</key>
 		<string>Macmini8,1</string>
 		<key>SerialNumber</key>
-		<string>C07WL5Z7JYVX</string>
+		<string>C07XJBYKJYVX</string>
 		<key>SmUUID</key>
-		<string>A285A3A1-90FC-40E3-AC23-4A1B1D283431</string>
+		<string>D067132B-085B-4ACE-9BF9-F8F47681A297</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
@@ -1361,7 +1408,7 @@
 		<key>#NvidiaWeb</key>
 		<false/>
 		<key>CustomUUID</key>
-		<string>D699CAC7-B0F4-568E-AA43-48218F506A4A</string>
+		<string>ACCD574E-53AA-51EC-A1F3-26F6A0CF07A4</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
